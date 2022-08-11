@@ -3,23 +3,21 @@ import variables from './variables'
 
 const GlobalStyle = createGlobalStyle`
 
-    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
-
     * {
     }
     html {
         
     }
     body {
-        font-family: 'Comic Neue', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
     h1, h2, h3, h4, h5, h6, span {
-        font-family: 'Comic Neue', sans-serif;
-        color: #fff
+        font-family: 'Poppins', sans-serif;
+        color: #000
     }
     h1 {
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 700 !important;
     }
     h6{
         font-size: 1.2rem;

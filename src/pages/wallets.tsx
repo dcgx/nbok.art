@@ -3,8 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import LandingLayout from "../layouts/landing";
 
-const Home: NextPage = () => {
-  return <h1>Revolut Art Landing</h1>;
+const Wallet: NextPage = () => {
+  return <h1>Wallet</h1>;
 };
 
-export default Home;
+export default Wallet;
