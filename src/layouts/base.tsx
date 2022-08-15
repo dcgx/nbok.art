@@ -1,5 +1,11 @@
 import Head from 'next/head'
 import { ScriptProps } from 'next/script'
+import styled from 'styled-components'
+
+const StyledMain = styled.main`
+  margin: 0 auto;
+  max-width: 1300px;
+`
 
 const BaseLayout = ({ children }: ScriptProps) => {
   return (
@@ -11,11 +17,11 @@ const BaseLayout = ({ children }: ScriptProps) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </Head>
-      {children}
+      <StyledMain>{children}</StyledMain>
     </div>
   )
 }

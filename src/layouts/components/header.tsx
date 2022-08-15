@@ -5,18 +5,32 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 25px 0px;
+  margin: 25px auto;
+  max-width: 1400px;
   .logo {
-    color: rgb(173, 31, 220);
-    text-transform: lowercase;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.9rem;
+    font-weight: 700;
+    span  {
+      color: #000;
+    }
+
+    img {
+      margin-right: 10px;
+      height: 80px;
+    }
   }
 `
 
 const Header = () => {
   return (
     <StyledHeader>
-      <h1 className="logo">revolut.art</h1>
+      <div className="logo">
+        <img src="/logo/large.png" />
+        <span>revolut[art]</span>
+      </div>
 
       <div>
         <Button>My Gallery</Button>
