@@ -9,11 +9,11 @@ const GlobalStyle = createGlobalStyle`
         
     }
     body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Noto Sans', sans-serif;
     }
     h1, h2, h3, h4, h5, h6, span {
-        font-family: 'Poppins', sans-serif;
-        color: #000
+        font-family: 'Noto Sans', sans-serif;
+        color: #55536f;
     }
     h1 {
         font-size: 2rem;

@@ -1,16 +1,23 @@
-import React from "react";
-import Tabs from "../components/Tabs/Tabs";
-import UserGallery from "../components/UserGallery";
-import UserInfo from "../components/UserInfo";
+import React from 'react'
+import Tabs from '../components/Tabs/Tabs'
+import ProfileGallery from '../components/ProfileGallery'
+import ProfileHeader from '../components/ProfileHeader'
+import styled from 'styled-components'
+import { NextPage } from 'next'
 
-const UsernamePage = () => {
+const StyledUsernamePage = styled.section`
+  max-width: 1020px;
+  margin: 0 auto;
+`
+
+const Username: NextPage = () => {
   return (
-    <>
+    <StyledUsernamePage>
       <Tabs />
-      <UserInfo />
-      <UserGallery />
-    </>
-  );
-};
+      <ProfileHeader />
+      <ProfileGallery />
+    </StyledUsernamePage>
+  )
+}
 
-export default UsernamePage;
+export default Username
