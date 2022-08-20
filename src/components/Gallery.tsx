@@ -19,11 +19,47 @@ const Gallery = () => {
       <Filter items={filterItems}></Filter>
 
       <div className="gallery">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <article>
+          <a
+            href="https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/71599777317896889596593422567297748181657612122279694726789609752289104363521"
+            target="_blank"
+          >
+            <Card
+              shadow
+              image="https://img.seadn.io/files/7c63aec94828a6d28b13d7b85a418138.png?fit=max&w=600"
+            >
+              <h5>Lady Apes</h5>
+            </Card>
+          </a>
+        </article>
+
+        <article>
+          <a
+            href="https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/71599777317896889596593422567297748181657612122279694726789609752289104363521"
+            target="_blank"
+          >
+            <Card
+              shadow
+              image="https://img.seadn.io/files/7c63aec94828a6d28b13d7b85a418138.png?fit=max&w=600"
+            >
+              <h5>Lady Apes</h5>
+            </Card>
+          </a>
+        </article>
+
+        <article>
+          <a
+            href="https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/71599777317896889596593422567297748181657612122279694726789609752289104363521"
+            target="_blank"
+          >
+            <Card
+              shadow
+              image="https://img.seadn.io/files/7c63aec94828a6d28b13d7b85a418138.png?fit=max&w=600"
+            >
+              <h5>Lady Apes</h5>
+            </Card>
+          </a>
+        </article>
       </div>
     </Wrapper>
   )

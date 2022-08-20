@@ -2,47 +2,52 @@ import { ScriptProps } from 'next/script'
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  /* box-shadow: rgb(0 0 0 / 8%) 0px 4px 15px; */
-  transition: box-shadow 0.25s ease-in-out;
-  padding: 5px;
-  margin: 5px;
-  text-align: center;
-`
-const Title = styled.h3``
-
-const Body = styled.p``
-
-const Image = styled.img`
-  height: 210px;
-`
-
 interface CardProps {
   children?: ReactNode
   image?: string
-  title?: string
+  title?: string,
+  shadow?: boolean
 }
 
-const Card = ({ children, image, title }: CardProps) => {
+interface CardWrapperProps {
+  shadow?: boolean
+}
+
+
+const CardWrapper = styled.div<CardWrapperProps>`
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: ${({shadow}) =>  shadow ? 'rgb(0 0 0 / 8%) 0px 4px 15px' : 'none'};
+  transition: box-shadow 0.25s ease-in-out;
+  margin: 5px;
+  text-align: center;
+  height: 100%;
+`
+const CardTitle = styled.h3``
+
+const CardBody = styled.div`
+padding: 5px 10px;
+  h4, h5 {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    color: #55536f;
+  }
+`
+
+const CardImage = styled.img`
+  height: auto;
+  width: 100%;
+`
+
+const Card = ({ children, image, title, shadow = false }: CardProps) => {
   return (
-    <Wrapper>
-      <Image src={image}></Image>
-      <Title>{title}</Title>
-      <Body>{children}</Body>
-    </Wrapper>
+    <CardWrapper shadow={shadow} >
+      <CardImage src={image}></CardImage>
+      {title && <CardTitle>{title}</CardTitle>}
+      <CardBody>{children}</CardBody>
+    </CardWrapper>
   )
-}
-
-{
-  /* <div className="img">
-        <img src="https://lh3.googleusercontent.com/1rD9cIr85WCNf4XW1j2wqVv1TlH9-tQ79mobmX3MSEcFB-zmHPhBcJx9cqL3wBURn3qkwHjf2BOkva74NHMlQEMGw2wSRBiEMdKQ_XU=w281" />
-      </div>
-      <div className="card-body">
-        <div className="nft-title">Lofi Guy #123</div>
-        <div className="nft-price">0.4</div>
-      </div> */
 }
 
 export default Card

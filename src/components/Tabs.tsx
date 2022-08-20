@@ -6,7 +6,7 @@ const TabWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: 20px 0;
+  margin: 50px 0;
 `
 
 const TabItem = styled.div`

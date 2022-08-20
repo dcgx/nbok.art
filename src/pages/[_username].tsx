@@ -14,8 +14,8 @@ const Username: NextPage = () => {
     <Container>
       <Tabs items={tabItems} />
       <ProfileHeader />
-      <EmptyNfts />
-      {/* <Gallery /> */}
+      {/* <EmptyNfts /> */}
+      <Gallery />
     </Container>
   )
 }

@@ -50,7 +50,14 @@ const ExampleGallery = () => {
         <Button>Learn more</Button>
       </div>
       <BrowserWrapper>
-        <Browser />
+        <Browser>
+          <iframe
+            height="100%"
+            width="100%"
+            src="http://localhost:3000/user"
+            style={{ border: '1px solid #cecece', borderRadius: '10px' }}
+          ></iframe>
+        </Browser>
       </BrowserWrapper>
     </Wrapper>
   )
