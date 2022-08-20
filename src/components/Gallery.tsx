@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   }
 `
 
-const ProfileGallery = () => {
+const Gallery = () => {
   const filterItems = ['All', 'Hidden']
 
   return (
@@ -29,4 +29,4 @@ const ProfileGallery = () => {
   )
 }
 
-export default ProfileGallery
+export default Gallery
