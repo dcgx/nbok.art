@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import BrowserNavbar from '../components/Browser/BrowserNavbar'
 import BrowserWrapper from '../components/Browser/BrowserWrapper'
 import Button from '../components/Button'
-import Card from '../components/Card'
+import Card from '../components/Card/Card'
+import CardBody from '../components/Card/CardBody'
+import CardTitle from '../components/Card/CardTitle'
 
 const StyledHomePage = styled.div`
   .hero {
@@ -41,6 +43,8 @@ const StyledHomePage = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin: 20px;
+      gap: 20px;
     }
   }
 
@@ -60,7 +64,7 @@ const StyledHomePage = styled.div`
     justify-content: center;
     color: #fff !important;
     flex-direction: column;
-    padding: 150px 0;
+    padding: 120px 0;
     h1 {
       color: #fff;
     }
@@ -95,9 +99,41 @@ const Home: NextPage = () => {
       <div className="getting-started">
         <h1>Getting started is so easy!</h1>
         <div className="getting-started-cards">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
+          <Card>
+            <img
+              height={200}
+              src="https://hcmstrategists.com/wp-content/uploads/2021/01/transfer-placeholder.jpeg"
+            />
+            <CardTitle>Connect Wallets</CardTitle>
+            <CardBody>
+              Add as many wallets as you want, from Metamask, Wallet connect,
+              and others.
+            </CardBody>
+          </Card>
+
+          <Card>
+            <img
+              height={200}
+              src="https://hcmstrategists.com/wp-content/uploads/2021/01/transfer-placeholder.jpeg"
+            />
+            <CardTitle>Connect Wallets</CardTitle>
+            <CardBody>
+              Add as many wallets as you want, from Metamask, Wallet connect,
+              and others.
+            </CardBody>
+          </Card>
+
+          <Card>
+            <img
+              height={200}
+              src="https://hcmstrategists.com/wp-content/uploads/2021/01/transfer-placeholder.jpeg"
+            />
+            <CardTitle>Connect Wallets</CardTitle>
+            <CardBody>
+              Add as many wallets as you want, from Metamask, Wallet connect,
+              and others.
+            </CardBody>
+          </Card>
         </div>
       </div>
 

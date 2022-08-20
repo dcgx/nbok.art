@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from '../Card'
+import Card from '../Card/Card'
 import Filter from '../Filter/Filter'
 import FilterItem from '../Filter/FilterItem'
 
