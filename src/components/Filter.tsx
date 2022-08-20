@@ -1,7 +1,14 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
-const StyledFilter = styled.div`
+const FilterWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+`
+
+const FilterItem = styled.div`
   border: 1px solid green;
   width: 90px;
   height: 45px;
@@ -27,10 +34,29 @@ const StyledFilter = styled.div`
     border: 2px solid rgb(0, 165, 255);
   }
 `
-const Filter = (props: { children: ReactNode }) => {
-  const { children } = props
 
-  return <StyledFilter>{children}</StyledFilter>
+interface FilterProps {
+  children?: ReactNode
+  items?: string[]
+}
+
+const Filter = ({ children, items }: FilterProps) => {
+  if (items?.length === 0) {
+    return <>{children}</>
+  }
+
+  return (
+    <FilterWrapper>
+      {items &&
+        items.map((item, index) => {
+          return <FilterItem key={index}>{item}</FilterItem>
+        })}
+    </FilterWrapper>
+  )
 }
 
 export default Filter
+{
+  /* <FilterItem>All</FilterItem>
+<FilterItem>Hidden</FilterItem> */
+}

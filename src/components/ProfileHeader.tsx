@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledProfileHeader = styled.div`
+const Wrapper = styled.div`
   display: flex;
   margin: 0 auto;
   align-items: center;
@@ -31,7 +31,7 @@ const StyledProfileHeader = styled.div`
 
 const ProfileHeader = () => {
   return (
-    <StyledProfileHeader>
+    <Wrapper>
       <div className="user-avatar">
         <img
           src="https://avatars3.githubusercontent.com/u/56496?s=460&v=4"
@@ -42,7 +42,7 @@ const ProfileHeader = () => {
         <span className="username">@warni</span>
         <span className="name">NFT Gallery</span>
       </div>
-    </StyledProfileHeader>
+    </Wrapper>
   )
 }
 

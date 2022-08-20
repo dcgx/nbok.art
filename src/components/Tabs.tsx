@@ -1,10 +1,15 @@
-import { useRouter } from 'next/router'
-import { ScriptProps } from 'next/script'
-import React, { ReactNode } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Url, UrlObject } from 'url'
 
-const StyledTab = styled.div`
+const TabWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+`
+
+const TabItem = styled.div`
   border: 1px solid green;
   width: 140px;
   height: 45px;
@@ -28,14 +33,19 @@ const StyledTab = styled.div`
   }
 `
 
-// const TabProps = {
-//   router:
-// }
-
-const Tab = (props: { children: ReactNode; href?: Url }) => {
-  const { children } = props
-
-  return <StyledTab>{children}</StyledTab>
+interface TabsProps {
+  items: string[]
 }
 
-export default Tab
+const Tabs = ({ items }: TabsProps) => {
+  return (
+    <TabWrapper>
+      {items &&
+        items.map((item, index) => {
+          return <TabItem key={index}>{item}</TabItem>
+        })}
+    </TabWrapper>
+  )
+}
+
+export default Tabs

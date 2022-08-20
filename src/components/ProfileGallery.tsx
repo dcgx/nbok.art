@@ -1,25 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from '../Card/Card'
-import Filter from '../Filter/Filter'
-import FilterItem from '../Filter/FilterItem'
+import Card from './Card'
+import Filter from './Filter'
 
-const StyledProfileGallery = styled.div`
+const Wrapper = styled.div`
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-
   }
 `
 
 const ProfileGallery = () => {
+  const filterItems = ['All', 'Hidden']
+
   return (
-    <StyledProfileGallery>
-      <Filter>
-        <FilterItem>All</FilterItem>
-        <FilterItem>Hidden</FilterItem>
-      </Filter>
+    <Wrapper>
+      <Filter items={filterItems}></Filter>
 
       <div className="gallery">
         <Card />
@@ -28,7 +25,7 @@ const ProfileGallery = () => {
         <Card />
         <Card />
       </div>
-    </StyledProfileGallery>
+    </Wrapper>
   )
 }
 

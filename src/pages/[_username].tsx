@@ -1,22 +1,20 @@
 import React from 'react'
-import Tabs from '../components/Tabs/Tabs'
+import Tabs from '../components/Tabs'
 import ProfileGallery from '../components/ProfileGallery'
 import ProfileHeader from '../components/ProfileHeader'
 import styled from 'styled-components'
 import { NextPage } from 'next'
-
-const StyledUsernamePage = styled.section`
-  max-width: 1020px;
-  margin: 0 auto;
-`
+import Container from '../components/Container'
 
 const Username: NextPage = () => {
+  const tabItems = ['Gallery', 'Wallets', 'Settings']
+
   return (
-    <StyledUsernamePage>
-      <Tabs />
+    <Container>
+      <Tabs items={tabItems} />
       <ProfileHeader />
       <ProfileGallery />
-    </StyledUsernamePage>
+    </Container>
   )
 }
 
