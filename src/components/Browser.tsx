@@ -38,6 +38,16 @@ const BrowserContent = styled.div`
   margin: 4px;
 `
 
+const BrowserFooter = styled.footer`
+  background: rgb(244, 244, 244);
+  padding: 0.7rem 1rem;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 100;
+  color: #000;
+`
+
 const Browser = ({ children }: ScriptProps) => {
   return (
     <BrowserWrapper>
@@ -46,6 +56,15 @@ const Browser = ({ children }: ScriptProps) => {
         <BrowserNavbarLink>revolut.art/diego</BrowserNavbarLink>
       </BrowserNavbar>
       <BrowserContent>{children}</BrowserContent>
+      <BrowserFooter>
+        Powered by{' '}
+        <a
+          href="https://revolut.art/?utm_source=powered_by&utm_medium=referral&utm_campaign=embed&utm_content=unknown"
+          target="_blank"
+        >
+          Revolut.art
+        </a>
+      </BrowserFooter>
     </BrowserWrapper>
   )
 }
