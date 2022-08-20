@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Button from '../../components/Button'
 import { BiCog } from 'react-icons/bi'
+import Button from '../../components/Button'
 const StyledHeader = styled.header`
   display: flex;
   align-items: center;
@@ -28,8 +28,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <div className="logo">
-        <img src="/logo/large.png" />
-        <span>revolut[art]</span>
+        <span>revolut.art</span>
       </div>
 
       <div>
