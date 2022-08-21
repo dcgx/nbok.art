@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import { BiCog } from 'react-icons/bi'
 import Button from '../../components/Button'
+import Dropdown from '../../components/Dropdown'
+import { useState } from 'react'
+import DropdownLink from '../../components/DropdownLink'
+import Separator from '../../components/Separator'
 const StyledHeader = styled.header`
   display: flex;
   align-items: center;
@@ -25,17 +29,31 @@ const StyledHeader = styled.header`
 `
 
 const Header = () => {
+  const [dropdownActive, setDropwdownActive] = useState(false)
+
   return (
     <StyledHeader>
       <div className="logo">
         <span>Revolut.Art</span>
       </div>
 
-      <div>
+      <div className="relative">
         <Button>My Gallery</Button>
-        <Button secondary>
+        <Button onClick={() => setDropwdownActive(!dropdownActive)} secondary>
           <BiCog />
         </Button>
+
+        {dropdownActive && (
+          <Dropdown>
+            <DropdownLink>Wallets</DropdownLink>
+            <DropdownLink>Settings</DropdownLink>
+            <Separator></Separator>
+            <DropdownLink>GitHub</DropdownLink>
+            <DropdownLink>Contact</DropdownLink>
+            <Separator></Separator>
+            <DropdownLink>Logout</DropdownLink>
+          </Dropdown>
+        )}
       </div>
     </StyledHeader>
   )

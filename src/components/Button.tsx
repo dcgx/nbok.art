@@ -5,13 +5,13 @@ interface ButtonProps {
   children?: ReactNode
   primary?: boolean
   secondary?: boolean
+  onClick?: () => void
 }
 
 const StyledButton = styled.button<ButtonProps>`
   font-family: sans-serif;
   color: ${props => props.primary ? '#fff' : '#c821ff'};
   background: ${(props) => (props.primary ? '#c821ff' : '#fafafa')};
-
   font-size: 18px;
   font-weight: 700;
   padding: 10px;
@@ -24,11 +24,15 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `
 
-const Button = ({ children, primary = true, secondary = false}: ButtonProps) => {
+const Button = ({ children, primary = true, secondary = false, onClick}: ButtonProps) => {
   if(secondary) primary = false
 
+  const handleClick = () => {
+    onClick && onClick()
+  }
+
   return (
-    <StyledButton primary={primary} secondary={secondary}>
+    <StyledButton onClick={handleClick} primary={primary} secondary={secondary}>
       {children}
     </StyledButton>
   )

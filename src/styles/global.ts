@@ -27,6 +27,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
         font-weight: 300;
     }
+
+    .relative {
+        position: relative !important;
+    }
     ${variables}
 `
 
