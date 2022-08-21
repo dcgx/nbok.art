@@ -7,25 +7,15 @@ import { NextPage } from 'next'
 import Container from '../components/Container'
 import EmptyNfts from '../components/EmptyNfts'
 import { useRouter } from 'next/router'
+import ProfileLayout from '../layouts/profile'
 
 const Username: NextPage = () => {
-  const tabItems = [
-    { label: 'Gallery', pathname: '/[_username]' },
-    { label: 'Wallets', pathname: '/wallets' },
-    { label: 'Settings', pathname: '/settings' }
-  ]
-
-  const router = useRouter()
-
-  console.log(router.pathname, 'pathname')
-
   return (
-    <Container>
-      <Tabs items={tabItems} />
+    <ProfileLayout>
       <ProfileHeader />
       {/* <EmptyNfts /> */}
       <Gallery />
-    </Container>
+    </ProfileLayout>
   )
 }
 

@@ -48,7 +48,11 @@ const Tabs = ({ items }: TabsProps) => {
   const router = useRouter()
 
   const handleClickTabItem = (pathname: string) => {
-    if (pathname === '/[_username]') return
+    if (pathname === '/[_username]') {
+      router.push('/usertest')
+      return
+    }
+
     router.push(pathname)
   }
 
