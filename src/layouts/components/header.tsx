@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
     font-size: 1.9rem;
     font-weight: 700;
     span  {
-      color: #000;
+      color: rgb(200,33,255);
     }
 
     img {
@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <div className="logo">
-        <span>revolut.art</span>
+        <span>Revolut.Art</span>
       </div>
 
       <div>
