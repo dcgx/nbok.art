@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
     font-size: 1.9rem;
     font-weight: 700;
     span  {
-      color: rgb(200,33,255);
+      color: rgb(200, 33, 255);
     }
 
     img {
@@ -33,7 +33,7 @@ const Header = () => {
 
       <div>
         <Button>My Gallery</Button>
-        <Button>
+        <Button secondary>
           <BiCog />
         </Button>
       </div>
