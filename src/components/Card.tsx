@@ -21,7 +21,7 @@ const CardWrapper = styled.div<CardWrapperProps>`
   transition: box-shadow 0.25s ease-in-out;
   margin: 5px;
   text-align: center;
-  height: 100%;
+  height: auto;
 `
 const CardTitle = styled.h3``
 

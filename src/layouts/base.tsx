@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const StyledMain = styled.main`
   margin: 0 auto;
-  max-width: 1300px;
+  /* max-width: 1300px; */
 `
 
 const BaseLayout = ({ children }: ScriptProps) => {
