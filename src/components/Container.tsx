@@ -16,7 +16,7 @@ const Wrapper = styled.div<ContainerProps>`
   height: ${props => props.height};
 `
 
-const Container = ({ children, expanded = false, height = 'auto', background = '#fff' }: ContainerProps) => {
+const Container = ({ children, expanded = false, height = 'auto', background = 'transparent' }: ContainerProps) => {
   return <Wrapper expanded={expanded} background={background} height={height}>{children}</Wrapper>
 }
 

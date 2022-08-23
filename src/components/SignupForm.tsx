@@ -29,21 +29,19 @@ const FormInput = styled.input`
   margin-bottom: 1rem;
 `
 
-const LoginForm = () => {
+const SignupForm = () => {
   return (
     <>
-      <h2>Login Into Revolut.art</h2>
+      <h2>Show off your NFTs like never before!</h2>
       <Form>
         <FormInput type="text" placeholder="Email" />
         <FormInput type="password" placeholder="Password" />
 
-        <Button block>Entrar</Button>
-        <Link href="/reset">Reset password?</Link>
-        <Separator />
-        <Link href="/reset">Create new Account</Link>
+        <Button block>Create Account</Button>
+        <Link href="/reset">Have an account? Login</Link>
       </Form>
     </>
   )
 }
 
-export default LoginForm
+export default SignupForm

@@ -5,6 +5,7 @@ import Dropdown from '../../components/Dropdown'
 import { useState } from 'react'
 import DropdownLink from '../../components/DropdownLink'
 import Separator from '../../components/Separator'
+import Link from 'next/link'
 const StyledHeader = styled.header`
   display: flex;
   align-items: center;
@@ -33,9 +34,11 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <div className="logo">
-        <span>Revolut.Art</span>
-      </div>
+      <Link href="/" style={{ cursor: 'pointer' }}>
+        <div className="logo">
+          <span>Revolut.Art</span>
+        </div>
+      </Link>
 
       <div className="relative">
         <Button>My Gallery</Button>
