@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
     }
     h1, h2, h3, h4, h5, h6, span {
         font-family: 'Poppins', sans-serif;
@@ -27,9 +29,19 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
         font-weight: 300;
     }
-
     .relative {
         position: relative !important;
+    }
+    .text-center {
+        text-align: center !important;
+    }
+    .my-1 {
+        margin-top: 0.25rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    .my-2 {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
     }
     ${variables}
 `

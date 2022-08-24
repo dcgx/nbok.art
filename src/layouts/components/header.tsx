@@ -6,12 +6,25 @@ import { useState } from 'react'
 import DropdownLink from '../../components/DropdownLink'
 import Separator from '../../components/Separator'
 import Link from 'next/link'
-const StyledHeader = styled.header`
+import { CgProfile } from 'react-icons/cg'
+import { BiWalletAlt } from 'react-icons/bi'
+const NavbarWrapper = styled.nav`
+  box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+  max-width: 100vw;
+  height: 72px;
+  top: 0px;
+  position: sticky;
+  z-index: 120;
+  transition: top 0.5s ease 0s;
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 25px auto;
-  max-width: 1400px;
+  padding: 0px 24px;
+`
+
+const NavbarLogo = styled.div`
+  cursor: pointer;
   .logo {
     display: flex;
     align-items: center;
@@ -29,23 +42,75 @@ const StyledHeader = styled.header`
   }
 `
 
+const NavbarItems = styled.ul`
+  padding-left: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+const NavbarItem = styled.li`
+  padding: 0 15px;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 16px;
+  flex-shrink: 0;
+
+  a {
+    align-items: center;
+    color: rgba(4, 17, 29, 0.75);
+    display: flex;
+    height: 100%;
+    padding: 0px 10px;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(0, 0, 0) !important;
+    }
+  }
+
+  svg {
+    color: rgba(4, 17, 29, 0.75);
+    &:hover {
+      color: rgb(0, 0, 0) !important;
+    }
+  }
+`
+
 const Header = () => {
   const [dropdownActive, setDropwdownActive] = useState(false)
 
   return (
-    <StyledHeader>
-      <Link href="/" style={{ cursor: 'pointer' }}>
-        <div className="logo">
-          <span>Revolut.Art</span>
-        </div>
-      </Link>
+    <NavbarWrapper>
+      <NavbarLogo>
+        <Link href="/">
+          <div className="logo">
+            <span>RevolutArt</span>
+          </div>
+        </Link>
+      </NavbarLogo>
 
-      <div className="relative">
-        <Button>My Gallery</Button>
-        <Button onClick={() => setDropwdownActive(!dropdownActive)} secondary>
-          <BiCog />
-        </Button>
-
+      <NavbarItems>
+        <NavbarItem>
+          <Link href="/user">My Gallery</Link>
+        </NavbarItem>
+        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+          <BiCog size={28} />
+        </NavbarItem>
+        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+          <CgProfile size={28} />
+        </NavbarItem>
+        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+          <BiWalletAlt size={28} />
+        </NavbarItem>
         {dropdownActive && (
           <Dropdown>
             <DropdownLink>Wallets</DropdownLink>
@@ -57,8 +122,8 @@ const Header = () => {
             <DropdownLink>Logout</DropdownLink>
           </Dropdown>
         )}
-      </div>
-    </StyledHeader>
+      </NavbarItems>
+    </NavbarWrapper>
   )
 }
 

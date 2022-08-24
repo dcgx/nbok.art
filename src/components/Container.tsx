@@ -10,7 +10,7 @@ interface ContainerProps {
 } 
 
 const Wrapper = styled.div<ContainerProps>`
-  max-width: ${props => props.expanded ? '100%' : '1020px'};
+  max-width: ${props => props.expanded ? '100%' : '1120px'};
   margin: 0 auto;
   background-color: ${props => props.background};
   height: ${props => props.height};
