@@ -37,7 +37,7 @@ const NavbarLogo = styled.div`
 
     img {
       margin-right: 10px;
-      height: 80px;
+      height: auto;
     }
   }
 `
@@ -88,12 +88,13 @@ const NavbarItem = styled.li`
 const Header = () => {
   const [dropdownActive, setDropwdownActive] = useState(false)
 
+
   return (
     <NavbarWrapper>
       <NavbarLogo>
         <Link href="/">
           <div className="logo">
-            <span>RevolutArt</span>
+            <img src='https://labartisan.net/demo/anftiz-demo/anftiz/assets/images/logo/logo.gif' />
           </div>
         </Link>
       </NavbarLogo>

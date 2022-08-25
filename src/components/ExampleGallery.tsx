@@ -4,12 +4,9 @@ import Browser from './Browser'
 import Button from './Button'
 
 const Wrapper = styled.section`
-  background: rgb(248, 191, 138);
-  background: linear-gradient(
-    90deg,
-    rgba(248, 191, 138, 1) 0%,
-    rgba(243, 168, 255, 1) 100%
-  );
+  background-color: #fbda61;
+  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+
   position: absolute;
   width: 100%;
   left: 0;
@@ -19,7 +16,7 @@ const Wrapper = styled.section`
   justify-content: center;
   color: #fff !important;
   flex-direction: column;
-  padding: 120px 0;
+  padding: 60px 0;
   h1 {
     color: #fff;
   }

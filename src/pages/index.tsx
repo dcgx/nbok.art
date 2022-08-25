@@ -5,14 +5,15 @@ import ExampleGallery from '../components/ExampleGallery'
 import GettingStarted from '../components/GettingStarted'
 import Hero from '../components/Hero'
 
-
 const Home: NextPage = () => {
   return (
-    <Container>
+    <>
       <Hero />
-      <GettingStarted />
-      <ExampleGallery />
-    </Container>
+      <Container>
+        <GettingStarted />
+        <ExampleGallery />
+      </Container>
+    </>
   )
 }
 

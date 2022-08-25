@@ -8,6 +8,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 90px 0;
 `
 
 const Cards = styled.div`
@@ -26,7 +27,7 @@ const GettingStarted = () => {
       <Cards>
         <Card>
           <IoWalletOutline size={70} />
-          <h4 className='text-center my-2'>Connect wallets</h4>
+          <h4 className="text-center my-2">Connect wallets</h4>
           <p>
             Add as many wallets as you want, from Metamask, Wallet connect, and
             others.
@@ -34,7 +35,7 @@ const GettingStarted = () => {
         </Card>
         <Card>
           <IoWalletOutline size={70} />
-          <h4 className='text-center my-2'>Create your NFTs Gallery</h4>
+          <h4 className="text-center my-2">Create your NFTs Gallery</h4>
           <p>
             Add as many wallets as you want, from Metamask, Wallet connect, and
             others.
@@ -42,7 +43,7 @@ const GettingStarted = () => {
         </Card>
         <Card>
           <IoWalletOutline size={70} />
-          <h4 className='text-center my-2'>Share it everywhere</h4>
+          <h4 className="text-center my-2">Share it everywhere</h4>
           <p>
             Add as many wallets as you want, from Metamask, Wallet connect, and
             others.
