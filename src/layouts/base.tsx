@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 const StyledMain = styled.main`
   margin: 0 auto;
+  background-color: #F4F8F7;
+  height: 100vh;
   /* max-width: 1300px; */
 `
 

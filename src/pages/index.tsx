@@ -9,10 +9,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Hero />
-      <Container>
-        <GettingStarted />
-        <ExampleGallery />
-      </Container>
+      <GettingStarted />
+      <ExampleGallery />
     </>
   )
 }

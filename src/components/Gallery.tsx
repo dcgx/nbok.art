@@ -25,6 +25,7 @@ const Gallery = () => {
             target="_blank"
           >
             <Card
+              rounded
               shadow
               image="https://img.seadn.io/files/7c63aec94828a6d28b13d7b85a418138.png?fit=max&w=600"
             >
@@ -39,6 +40,7 @@ const Gallery = () => {
             target="_blank"
           >
             <Card
+              rounded
               shadow
               image="https://img.seadn.io/files/7c63aec94828a6d28b13d7b85a418138.png?fit=max&w=600"
             >
@@ -53,6 +55,7 @@ const Gallery = () => {
             target="_blank"
           >
             <Card
+              rounded
               shadow
               image="https://img.seadn.io/files/7c63aec94828a6d28b13d7b85a418138.png?fit=max&w=600"
             >

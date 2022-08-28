@@ -4,10 +4,9 @@ import Browser from './Browser'
 import Button from './Button'
 
 const Wrapper = styled.section`
-  background-color: #fbda61;
-  background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
 
-  position: absolute;
   width: 100%;
   left: 0;
   right: 0;
@@ -16,7 +15,8 @@ const Wrapper = styled.section`
   justify-content: center;
   color: #fff !important;
   flex-direction: column;
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 200px;
   h1 {
     color: #fff;
   }
@@ -34,6 +34,16 @@ const BrowserWrapper = styled.div`
   padding: 1em;
 `
 
+const BrowserContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  max-width: 1100px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+`
+
 const ExampleGallery = () => {
   return (
     <Wrapper>
@@ -47,14 +57,16 @@ const ExampleGallery = () => {
         <Button>Learn more</Button>
       </div>
       <BrowserWrapper>
-        <Browser>
-          <iframe
-            height="100%"
-            width="100%"
-            src="http://localhost:3000/user"
-            style={{ border: '1px solid #cecece', borderRadius: '10px' }}
-          ></iframe>
-        </Browser>
+        <BrowserContainer>
+          <Browser>
+            <iframe
+              height="100%"
+              width="100%"
+              src="http://localhost:3000/user"
+              style={{ border: '1px solid #cecece', borderRadius: '10px' }}
+            ></iframe>
+          </Browser>
+        </BrowserContainer>
       </BrowserWrapper>
     </Wrapper>
   )

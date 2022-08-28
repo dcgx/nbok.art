@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { BiCog } from 'react-icons/bi'
 import Button from '../../components/Button'
 import Dropdown from '../../components/Dropdown'
-import { useState } from 'react'
+import { createRef, useEffect, useRef, useState } from 'react'
 import DropdownLink from '../../components/DropdownLink'
 import Separator from '../../components/Separator'
 import Link from 'next/link'
@@ -87,14 +87,26 @@ const NavbarItem = styled.li`
 
 const Header = () => {
   const [dropdownActive, setDropwdownActive] = useState(false)
-
+  const dropdown = createRef<HTMLDivElement>()
+  useEffect(() => {
+    if (!dropdownActive) return
+    function handleClick(event: MouseEvent) {
+      console.log(dropdown,'dropdow')
+      if (dropdown.current && !dropdown.current.contains(event.target)) {
+        setDropwdownActive(false)
+      }
+    }
+    window.addEventListener('click', handleClick)
+    // clean up
+    return () => window.removeEventListener('click', handleClick)
+  }, [dropdownActive])
 
   return (
     <NavbarWrapper>
       <NavbarLogo>
         <Link href="/">
           <div className="logo">
-            <img src='https://labartisan.net/demo/anftiz-demo/anftiz/assets/images/logo/logo.gif' />
+            <img src="https://labartisan.net/demo/anftiz-demo/anftiz/assets/images/logo/logo.gif" />
           </div>
         </Link>
       </NavbarLogo>
@@ -113,7 +125,7 @@ const Header = () => {
           <BiWalletAlt size={28} />
         </NavbarItem>
         {dropdownActive && (
-          <Dropdown>
+          <Dropdown ref={dropdown}>
             <DropdownLink>Wallets</DropdownLink>
             <DropdownLink>Settings</DropdownLink>
             <Separator></Separator>

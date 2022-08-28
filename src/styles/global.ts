@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
         margin: 0;
         padding: 0;
+        background: #F4F8F6;
     }
     h1, h2, h3, h4, h5, h6, span {
         font-family: 'Poppins', sans-serif;

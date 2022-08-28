@@ -1,8 +1,13 @@
 import { ScriptProps } from 'next/script'
-import React, { ReactNode } from 'react'
+import React, { ReactNode, RefObject } from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
+interface DropdownProps {
+  children?: ReactNode
+  ref?: RefObject<HTMLDivElement>
+}
+
+const Wrapper = styled.div<DropdownProps>`
   position: absolute;
   top: 100%;
   right: 0px;
@@ -16,8 +21,8 @@ const Wrapper = styled.div`
   overflow: hidden;
 `
 
-const Dropdown = ({ children }: ScriptProps) => {
-  return <Wrapper>{children}</Wrapper>
+const Dropdown = ({ children, ref }: DropdownProps) => {
+  return <Wrapper ref={ref}>{children}</Wrapper>
 }
 
 export default Dropdown
