@@ -91,7 +91,7 @@ const Header = () => {
   useEffect(() => {
     if (!dropdownActive) return
     function handleClick(event: MouseEvent) {
-      console.log(dropdown,'dropdow')
+      console.log(dropdown, 'dropdow')
       if (dropdown.current && !dropdown.current.contains(event.target)) {
         setDropwdownActive(false)
       }
@@ -112,6 +112,12 @@ const Header = () => {
       </NavbarLogo>
 
       <NavbarItems>
+        <NavbarItem>
+          <Link href="/login">Login</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/login">Create Profile</Link>
+        </NavbarItem>
         <NavbarItem>
           <Link href="/user">My Gallery</Link>
         </NavbarItem>

@@ -35,10 +35,11 @@ const SignupForm = () => {
       <h2>Show off your NFTs like never before!</h2>
       <Form>
         <FormInput type="text" placeholder="Email" />
+        <FormInput type="text" placeholder="Name" />
         <FormInput type="password" placeholder="Password" />
 
         <Button block>Create Account</Button>
-        <Link href="/reset">Have an account? Login</Link>
+        <Link href="/login">Have an account? Login</Link>
       </Form>
     </>
   )
