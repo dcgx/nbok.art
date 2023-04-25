@@ -11,7 +11,15 @@ const Wrapper = styled.div`
   }
 `
 
-const Gallery = () => {
+export interface NftGalleryProps {
+  /**
+   * Ethereum address (`0x...`) or ENS domain (`vitalik.eth`) for which the gallery should contain associated NFTs.
+   * Required.
+   */
+  ownerAddress?: string
+}
+
+const NftGallery = ({ ownerAddress }: NftGalleryProps) => {
   const filterItems = ['All', 'Hidden']
 
   return (
@@ -68,4 +76,4 @@ const Gallery = () => {
   )
 }
 
-export default Gallery
+export default NftGallery

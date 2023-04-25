@@ -1,6 +1,6 @@
 import React from 'react'
 import Tabs from '../components/Tabs'
-import Gallery from '../components/Gallery'
+import NftGallery from '../components/NftGallery'
 import ProfileHeader from '../components/ProfileHeader'
 import styled from 'styled-components'
 import { NextPage } from 'next'
@@ -14,7 +14,7 @@ const Username: NextPage = () => {
     <ProfileLayout>
       <ProfileHeader />
       {/* <EmptyNfts /> */}
-      <Gallery />
+      <NftGallery />
     </ProfileLayout>
   )
 }
