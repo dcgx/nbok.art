@@ -93,7 +93,8 @@ const Header = () => {
     if (!dropdownActive) return
     function handleClick(event: MouseEvent) {
       console.log(dropdown, 'dropdow')
-      if (dropdown.current && !dropdown.current.contains(event.target)) {
+      // @ts-ignore
+      if (dropdown.current && !dropdown.current.contains(event.target)) { 
         setDropwdownActive(false)
       }
     }
