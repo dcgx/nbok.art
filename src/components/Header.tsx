@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 import { BiCog } from 'react-icons/bi'
-import Button from '../../components/Button'
-import Dropdown from '../../components/Dropdown'
 import { createRef, useEffect, useRef, useState } from 'react'
-import DropdownLink from '../../components/DropdownLink'
-import Separator from '../../components/Separator'
 import Link from 'next/link'
 import { CgProfile } from 'react-icons/cg'
 import { BiWalletAlt } from 'react-icons/bi'
+import Dropdown from './Dropdown'
+import DropdownLink from './DropdownLink'
+import Separator from './Separator'
 const NavbarWrapper = styled.nav`
   box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
   max-width: 100vw;
@@ -91,7 +90,7 @@ const Header = () => {
   useEffect(() => {
     if (!dropdownActive) return
     function handleClick(event: MouseEvent) {
-      console.log(dropdown,'dropdow')
+      console.log(dropdown, 'dropdow')
       if (dropdown.current && !dropdown.current.contains(event.target)) {
         setDropwdownActive(false)
       }

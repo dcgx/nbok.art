@@ -1,9 +1,9 @@
-import Head from "next/head";
-import { ScriptProps } from "next/script";
-import BaseLayout from "./base";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import Main from "./components/main";
+import Head from 'next/head'
+import { ScriptProps } from 'next/script'
+import BaseLayout from './base'
+import Footer from './components/footer'
+import Main from './components/main'
+import Header from '../components/Header'
 
 const DefaulLayout = ({ children }: ScriptProps) => {
   return (
@@ -14,6 +14,6 @@ const DefaulLayout = ({ children }: ScriptProps) => {
         <Footer />
       </>
     </BaseLayout>
-  );
-};
-export default DefaulLayout;
+  )
+}
+export default DefaulLayout
