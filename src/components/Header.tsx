@@ -7,6 +7,8 @@ import { BiWalletAlt } from 'react-icons/bi'
 import Dropdown from './Dropdown'
 import DropdownLink from './DropdownLink'
 import Separator from './Separator'
+import { motion } from 'framer-motion'
+
 const NavbarWrapper = styled.nav`
   box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
   max-width: 100vw;
@@ -101,41 +103,49 @@ const Header = () => {
   }, [dropdownActive])
 
   return (
-    <NavbarWrapper>
-      <NavbarLogo>
-        <Link href="/">
-          <div className="logo">
-            <img src="https://labartisan.net/demo/anftiz-demo/anftiz/assets/images/logo/logo.gif" />
-          </div>
-        </Link>
-      </NavbarLogo>
+    <>
+      <motion.header
+        initial={{ y: -40, opacity: 0 }}
+        transition={{ duration: 0.7, ease: 'easeInOut' }}
+        animate={{ y: 0, opacity: 1 }}
+      >
+        <NavbarWrapper>
+          <NavbarLogo>
+            <Link href="/">
+              <div className="logo">
+                <img src="https://labartisan.net/demo/anftiz-demo/anftiz/assets/images/logo/logo.gif" />
+              </div>
+            </Link>
+          </NavbarLogo>
 
-      <NavbarItems>
-        <NavbarItem>
-          <Link href="/user">My Gallery</Link>
-        </NavbarItem>
-        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
-          <BiCog size={28} />
-        </NavbarItem>
-        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
-          <CgProfile size={28} />
-        </NavbarItem>
-        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
-          <BiWalletAlt size={28} />
-        </NavbarItem>
-        {dropdownActive && (
-          <Dropdown ref={dropdown}>
-            <DropdownLink>Wallets</DropdownLink>
-            <DropdownLink>Settings</DropdownLink>
-            <Separator></Separator>
-            <DropdownLink>GitHub</DropdownLink>
-            <DropdownLink>Contact</DropdownLink>
-            <Separator></Separator>
-            <DropdownLink>Logout</DropdownLink>
-          </Dropdown>
-        )}
-      </NavbarItems>
-    </NavbarWrapper>
+          <NavbarItems>
+            <NavbarItem>
+              <Link href="/user">My Gallery</Link>
+            </NavbarItem>
+            <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+              <BiCog size={28} />
+            </NavbarItem>
+            <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+              <CgProfile size={28} />
+            </NavbarItem>
+            <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+              <BiWalletAlt size={28} />
+            </NavbarItem>
+            {dropdownActive && (
+              <Dropdown ref={dropdown}>
+                <DropdownLink>Wallets</DropdownLink>
+                <DropdownLink>Settings</DropdownLink>
+                <Separator></Separator>
+                <DropdownLink>GitHub</DropdownLink>
+                <DropdownLink>Contact</DropdownLink>
+                <Separator></Separator>
+                <DropdownLink>Logout</DropdownLink>
+              </Dropdown>
+            )}
+          </NavbarItems>
+        </NavbarWrapper>
+      </motion.header>
+    </>
   )
 }
 
