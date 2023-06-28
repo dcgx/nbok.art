@@ -40,7 +40,7 @@ const LoginForm = () => {
         <Button block>Entrar</Button>
         <Link href="/reset">Reset password?</Link>
         <Separator />
-        <Link href="/reset">Create new Account</Link>
+        <Link href="/signup">Create new Account</Link>
       </Form>
     </>
   )
