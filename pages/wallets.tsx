@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Button from '../components/Button'
 import Modal from '../components/Modal'
 import ProfileLayout from '../layouts/profile'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 const Wallet: NextPage = () => {
   const [modalActive, setModalActive] = useState(true)
@@ -23,6 +24,7 @@ const Wallet: NextPage = () => {
           <div
             style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
           >
+            <ConnectButton />
             <Button block dark>
               Ethereum Wallet
             </Button>

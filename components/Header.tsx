@@ -119,34 +119,40 @@ const Header = () => {
             </Link>
           </NavbarLogo>
 
-          <NavbarItems>
-            <NavbarItem>
-              <Link href="/user">My Gallery</Link>
-            </NavbarItem>
-            <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
-              <BiCog size={28} />
-            </NavbarItem>
-            <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
-              <CgProfile size={28} />
-            </NavbarItem>
-            <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
-              <BiWalletAlt size={28} />
-            </NavbarItem>
-            {dropdownActive && (
-              <Dropdown ref={dropdown}>
-                <DropdownLink>Wallets</DropdownLink>
-                <DropdownLink>Settings</DropdownLink>
-                <Separator></Separator>
-                <DropdownLink>GitHub</DropdownLink>
-                <DropdownLink>Contact</DropdownLink>
-                <Separator></Separator>
-                <DropdownLink>Logout</DropdownLink>
-              </Dropdown>
-            )}
-          </NavbarItems>
-        </NavbarWrapper>
-      </motion.header>
-    </>
+      <NavbarItems>
+        <NavbarItem>
+          <Link href="/login">Login</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/login">Create Profile</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/user">My Gallery</Link>
+        </NavbarItem>
+        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+          <BiCog size={28} />
+        </NavbarItem>
+        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+          <CgProfile size={28} />
+        </NavbarItem>
+        <NavbarItem onClick={() => setDropwdownActive(!dropdownActive)}>
+          <BiWalletAlt size={28} />
+        </NavbarItem>
+        {dropdownActive && (
+          <Dropdown ref={dropdown}>
+            <DropdownLink>Wallets</DropdownLink>
+            <DropdownLink>Settings</DropdownLink>
+            <Separator></Separator>
+            <DropdownLink>GitHub</DropdownLink>
+            <DropdownLink>Contact</DropdownLink>
+            <Separator></Separator>
+            <DropdownLink>Logout</DropdownLink>
+          </Dropdown>
+        )}
+      </NavbarItems>
+    </NavbarWrapper>
+  </motion.header>
+  </>
   )
 }
 
