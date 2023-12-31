@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { BiCog } from 'react-icons/bi'
-import Button from '../../components/Button'
-import Dropdown from '../../components/Dropdown'
 import { createRef, useEffect, useRef, useState } from 'react'
-import DropdownLink from '../../components/DropdownLink'
-import Separator from '../../components/Separator'
 import Link from 'next/link'
 import { CgProfile } from 'react-icons/cg'
 import { BiWalletAlt } from 'react-icons/bi'
+import Dropdown from './Dropdown'
+import DropdownLink from './DropdownLink'
+import Separator from './Separator'
+import { motion } from 'framer-motion'
+
 const NavbarWrapper = styled.nav`
   box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
   max-width: 100vw;
@@ -92,7 +93,8 @@ const Header = () => {
     if (!dropdownActive) return
     function handleClick(event: MouseEvent) {
       console.log(dropdown, 'dropdow')
-      if (dropdown.current && !dropdown.current.contains(event.target)) {
+      // @ts-ignore
+      if (dropdown.current && !dropdown.current.contains(event.target)) { 
         setDropwdownActive(false)
       }
     }
@@ -102,14 +104,20 @@ const Header = () => {
   }, [dropdownActive])
 
   return (
-    <NavbarWrapper>
-      <NavbarLogo>
-        <Link href="/">
-          <div className="logo">
-            <img src="https://labartisan.net/demo/anftiz-demo/anftiz/assets/images/logo/logo.gif" />
-          </div>
-        </Link>
-      </NavbarLogo>
+    <>
+      <motion.header
+        initial={{ y: -40, opacity: 0 }}
+        transition={{ duration: 0.7, ease: 'easeInOut' }}
+        animate={{ y: 0, opacity: 1 }}
+      >
+        <NavbarWrapper>
+          <NavbarLogo>
+            <Link href="/">
+              <div className="logo">
+                <img src="https://labartisan.net/demo/anftiz-demo/anftiz/assets/images/logo/logo.gif" />
+              </div>
+            </Link>
+          </NavbarLogo>
 
       <NavbarItems>
         <NavbarItem>
@@ -143,6 +151,8 @@ const Header = () => {
         )}
       </NavbarItems>
     </NavbarWrapper>
+  </motion.header>
+  </>
   )
 }
 

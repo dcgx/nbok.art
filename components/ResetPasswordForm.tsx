@@ -32,7 +32,7 @@ const FormInput = styled.input`
 const ResetPasswordForm = () => {
   return (
     <>
-      <a href="">Go Back</a>
+      <Link href="/login">Go Back</Link>
       <h2>Reset your password</h2>
       <p>We'll send you an email so you can reset your password.</p>
       <Form>
